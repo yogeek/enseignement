@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Introduction à la virtualisation</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <section data-state="intro" data-background-image="img/virtualization.jpeg">
+                    <h1 style="color: black;">
+                        De la Virtualisation <br/>
+                        au Cloud Computing
+                    </h1>
+
+                    <aside class="notes">
+						Présentation perso + Thales Services + projets et stages + questions (qui connait ? qui a déjà utilisé ?)
+					</aside>
+                </section>
+
+                <section data-state="intro">
+
+                    <span class="fragment fade-in">
+                        <h1 class="fragment grow">
+                            <p class="fragment shrink">Au programme</p>
+                        </h1>
+                    </span>
+
+                    <ul>
+                        <span class="fragment fade-left">
+                            <li>
+                                <p class="fragment shrink">Qu'est-ce que la virtualisation ?</p>
+                            </li>
+                        </span>
+                        <span class="fragment fade-left">
+                            <li>
+                                <p class="fragment shrink">Cloud : évolution ou révolution ?</p>
+                            </li>
+                        </span>
+                        <span class="fragment fade-left">
+                            <li>
+                                <p class="fragment shrink">Pause</p>
+                            </li>
+                        </span>
+                        <span class="fragment fade-left">
+                            <li>
+                                <p class="fragment shrink">Démo</p>
+                            </li>
+                        </span>
+                    </ul>
+
+                </section>
+            </section>
+
+            <!-- VIRTUALISATION -->
+            <section data-background="#4eb775">
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Virtualisation
+
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-background-transition="zoom">
+                    <h1>Définition</h1>
+                    <blockquote style="background: #f9f9f9;">
+                        &ldquo;La virtualisation consiste à faire fonctionner un ou plusieurs systèmes d'exploitation / applications comme un simple logiciel, sur un ou plusieurs ordinateurs - serveurs / système d'exploitation, au lieu de ne pouvoir en installer qu'un seul par machine.&rdquo;
+                    </blockquote>
+                    <i>Wikipedia</i>
+                </section>
+                <section data-state="virtualisation">
+                    <h1>Principe</h1>
+                    <img src="img/exemple_avec_ou_sans_virtualisation.png" />
+
+                	<aside class="notes">
+						principe simple : objectif = faire fonctionner plusieurs systèmes d'exploitation sur une seule machine physique
+					</aside>
+                </section>
+                <section data-state="virtualisation">
+                    <h1>Concrêtement</h1>
+                    <img src="img/virtualisation_before_after.jpg" />
+
+					<aside class="notes">
+                    	Une fois l'hyperviseur installé, l'administrateur de la machine pourra, comme le montre le schéma ci-dessous, provisionner des machines virtuelles, ou VM (Virtual Machine), en déterminant de façon précise les ressources qui lui seront attribuées.
+                    </aside>
+
+                </section>
+                <section data-state="virtualisation">
+                    <h1>Concrêtement</h1>
+                    <img src="img/archi-sans-avec.png" />
+                    
+                    <aside class="notes">
+                    	Ces machines virtuelles fonctionnent exactement de la même façon que des machines physiques. Elles contiennent donc un système d’exploitation, des applications et des données.
+						L'intégralité de la machine virtuelle est alors gérée dans des fichiers qui peuvent facilement être sauvegardés ou déplacés.
+                    <aside>
+                </section>
+                <section data-state="virtualisation"  data-markdown>
+                    <script type="text/template">
+                        # Principe
+                        
+                        <img src="img/principe_virtualisation.png" height="400" /> 
+                    
+                        Note: 
+                        L'hyperviseur crée un environnement virtuel complet simulant littéralement un nouvel ordinateur complet, avec du faux matériel. À quelques rares exceptions, le système d'exploitation invité (installé dans la machine virtuelle) ne communique qu'avec ce faux matériel simulé, rendant étanche l'environnement virtualisé.
+
+                    </script>
+                </section>
+                <section data-state="virtualisation">
+                    <h1>Quel intérêt ?</h1>
+                    <img src="img/but_why.gif" />
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Avantages
+
+                        - Abstraction du matériel : *"Software manipulates hardware"* 
+                        - Séparation de l'infrastrucure physique pour créer des ressources dédiées.
+                        - Allocation des ressources *(RAM, CPU, réseau, stockage)* à la demande ! 
+
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Avantage 1
+
+                        Moins de serveurs physiques
+
+                        <img src="img/less_machines_with_vm.png" height="400px" />
+
+                        Note:
+                        Infra traditionnelle : beaucoup de serveurs sont surdimensionnés, pour parer à d’éventuels pics de charge. 
+                        Puisque plusieurs VMs peuvent fonctionner sur 1 serveur physique : le nbre de serveurs à acheter et à entretenir va être réduit. 
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Avantage 2
+
+                        Une meilleure disponibilité
+
+                        <img src="img/vm_charge_repartition.gif" height="400px" />
+
+                        Note:
+                        migration à chaud des machines virtuelles => si panne, VM déplacée sur autre serveur
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Avantage 3
+
+                        De meilleures performances
+
+                        <img src="img/flying_mower.gif" />
+
+                        Note:
+                        Allocation dynamique de la puissance de calcul en fonction des besoins de chaque application à un instant donné
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Avantage 4
+
+                        Sécurisation et isolation
+
+                         <img src="img/you_shall_not_pass.gif" />
+
+                        Note:
+                        Moins de surface d'attaque
+                        Attaque des OS virtuels, pas des OS hôtes invisibles pour l'attaquant !
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Mais aussi...
+
+                        - Tester, sans rien payer
+                        - Tremplin vers le Cloud...
+
+                        Note:
+                        - créer une VM vierge en quelques minutes => facilité pour tester de nouveaux services
+                        - catalogue de services, allocation de VMs à la demande : transformer son IT en centre de services !
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Quelques solutions
+
+                        - Xen, KVM, Linux-VServer, Virtual Box, Hyper-V
+                        - VMware Server
+
+                        Note:
+                    	Démo avec virtualbox ?
+
+                    </script>
+                </section>
+                <section data-state="virtualisation" data-markdown>
+                    <script type="text/template">
+                        # Historique de la virtualisation
+
+                        <img src="img/cloud_history.png" />
+
+                        <aside class="notes">
+                        	La virtualisation n’est pas une technologie née récemment. Les premiers travaux relatifs à la virtualisation ont été développés à la fin des années 1970 par le MIT en collaboration avec les ingénieurs d’IBM où fut mis au point le système expérimental qui deviendra plus tard le produit Hyperviseur.
+							C’est durant les deux décennies suivantes que furent créés et développés les premiers embryons de virtualisation sur des ordinateurs personnels. Ces solutions pouvaient être soit purement logicielles, soit couplées à du matériel additionnel.
+
+							Ce n’est réellement qu’au début des années 2000 que se sont démocratisées les technologies de virtualisation. Les utilisateurs pouvaient alors installer sur leur machine des outils libres tels que Xen, KVM, QEMU, Bochs, Linux-VServer, Virtual Box ou encore des logiciels propriétaires mais gratuits comme VirtualPC, Virtual Server et VMware Server. Ces outils ont permis et achevé le développement de la virtualisation dans le monde x86.
+                        </aside>
+                    </script>
+                </section>
+            </section>
+
+            <!-- CLOUD COMPUTING -->
+            <section data-background="#4a7eba">
+                <section data-state="cloud" data-markdown data-background-image="img/cloud_intro.gif" data-background-size="1000px">
+                    <script type="text/template">
+                        # Cloud Computing
+
+                    </script>
+                </section>
+                <section data-state="cloud" data-markdown>
+                    <script type="text/template">
+                        # Définition 
+
+                        Ressources informatiques externalisées 
+                        - mise à disposition en mode **location courte durée** <!-- .element: class="fragment highlight-green" data-fragment-index="1" --> 
+                        - et en **quantités infinies** <!-- .element: class="fragment highlight-green" data-fragment-index="2" -->
+
+                        Note:
+                        - Cloud computing = Cloud
+                        - La virtualisation est une partie du cloud computing
+                        - 'courte durée' = de l'ordre de l'heure, SECONDE chez AWS depuis 1 semaine ! (ex : B/G deploy, traitement images sat à la volée lors du passage au-dessus d'une antenne stallite, hacking pendant 30min avec des milliers de serveur...)
+                        - 'ressources infinies' = robinet d'eau
+                    </script>
+                </section>
+
+                <section data-state="cloud" data-markdown>
+                    <script type="text/template">
+                        # En résumé 
+
+                        - Cloud = pouvoir utiliser des ressources informatiques distantes sans les posséder
+                          - "Pay-as-you-go" <!-- .element: class="fragment" data-fragment-index="1" --> 
+                          - Ressources "robinet d'eau" <!-- .element: class="fragment" data-fragment-index="2" -->
+                          - "Infra as Code" (API)<!-- .element: class="fragment" data-fragment-index="3" -->
+
+                        Note:
+                        - Automatiser toute son infra  ! => pet vs. cattle
+                    </script>
+                </section>
+
+                <section data-state="cloud">
+                    <h1>Origines</h1>
+                    <ul>
+                        <li class="fragment data-fragment-index='1'">Juillet 2002 : Amazon est un site de vente en ligne</li>
+                        <li class="fragment data-fragment-index='3'">Demande exponentielle, plus de clients : Amazon installe des dizaines de milliers de serveurs dans le monde, répartis dans de multiples datacenters.</li>
+                        <img class=" fragment data-fragment-index='2'" src="img/amazon_site.jpg" width="300" height="200" align="left" />
+                        <img class="fragment data-fragment-index='4'" src="img/datacenter_servers.jpg" width="300 " height="200 " align="right" />
+                    </ul>
+                </section>
+
+                <section data-state="cloud" data-markdown>
+                    <script type="text/template">
+                        # Origines
+                        - Tous ces serveurs ne sont pas utilisés en même temps : certains sont prêts pour faire face à la demande lors des pics de vente. <!-- .element: class="fragment " data-fragment-index="1" -->
+                        - Les ingénieur d'Amazon ont alors eu l'idée de les louer à d'autres développeurs web.  <!-- .element: class="fragment " data-fragment-index="2" -->
+                        - AWS : on ne va pas louer les machines mais leur puissance ! <!-- .element: class="fragment " data-fragment-index="3" -->
+                    </script>
+                </section>
+
+                <section data-state="cloud" data-markdown>
+                    <script type="text/template">
+                        # Une __évolution__ technique 
+
+                        - Utilisation de la virtualisation banalisée <!-- .element: class="fragment " data-fragment-index="1 " -->
+                        - Généralisation des solutions WebServices (API)  <!-- .element: class="fragment " data-fragment-index="2 " -->
+                        - Apparition de gros acteurs IT très crédibles <!-- .element: class="fragment " data-fragment-index="3 " -->
+
+                    </script>
+                </section>
+
+                <section data-state="cloud" data-markdown>
+                    <script type="text/template">
+                        # Une _Révolution_ des usages
+
+
+                        - Plus besoin de planifier son infrastructure <!-- .element: class="fragment " data-fragment-index="1 " -->
+                        - Besoin d'estimer finement la consommation à venir <!-- .element: class="fragment " data-fragment-index="2 " -->
+                          - Opportunité pour l'innovation ! <!-- .element: class="fragment " data-fragment-index="3 " -->
+                          - Casse-tête pour la planification budgétaire ! <!-- .element: class="fragment " data-fragment-index="4 " -->
+                        - Les projets créent eux-mêmes leur infrastructure en fonction de leur besoin <!-- .element: class="fragment " data-fragment-index="5 " -->
+
+                        Note:
+                        - Facturation à l'usage => spot instances = 90% - !! Serverless ! (AWS Lambda facturation tranche de 100ms)
+                        - General Electrics : avait 94 datacenters, gardé 4 (confidentialité critique)
+                        - Anecdotes : Suède, Dropbox, Netflix
+                        - A permis le développement du Big Data, machine learning, deep learning (GPU, TPU...)
+                        - Favorise l'innovation (9 projets sur 10 en échec)
+                        - DevOps !
+
+                    </script>
+                </section>
+
+                <section data-state="cloud">
+                    <h1>Caractéristiques</h1>
+                    <img src="img/cloud_caracteristiques.jpg " />
+                </section>
+
+                <section data-state="cloud">
+                    <h1>Différents types</h1>
+                    <img src="img/cloud_priv_pub_hyb_com.jpg " />
+                    
+                    <aside class="notes">
+                    - cloud communautaire : utilisé par plusieurs organisations qui ont des besoins communs.
+                    (amadeus 1er acteur mondial domaine voyages, CMED startup 2010 pour créer un nouveau cloud communautaire à destination des laboratoires pharmaceutiques )
+                    - cloud hybride : bursting, Disaster Recovery...
+                    </aside>
+                    
+                </section>
+
+                <section data-state="cloud">
+                    <h1>Différents services</h1>
+                    <img src="img/iaas_paas_saas.png " />
+                </section>
+
+                <section data-state="cloud" data-markdown>
+                    <script type="text/template">
+                        # Différences
+
+                        - IaaS = légos de l'IT
+                        - PaaS = préassemblage de légos
+                          - Twillio (VoIP par appel d'API)
+                          - PokemonGo, Snapchat
+                        - SaaS = construction toute faite
+
+                        Note:
+                        - SaaS : pas forcément sur le web (mobiles, applis standalone : DropBox, Google Docs)
+                        - CaaS : formule à la mode pour les conteneurs
+
+                    </script>
+                </section>
+
+                <section data-state="cloud">
+                    <p>Un niveau de service adapté au besoin</p>
+                    <img src="img/differents_services_cloud.png " />
+                </section>
+
+                <section data-state="cloud">
+                    <p>Principaux fournisseurs</p>
+                    <img src="img/cloud_vendors.jpg " />
+                </section>
+
+                <section data-state="cloud">
+                    <p>Légos...vraiment ? !</p>
+                    <a href="https://cloudcraft.co/" target="_blank"><img src="img/lego.gif " width="600 " height="400 "/></a>
+                    <aside class="notes">
+                    	clic !
+                    </aside>
+                </section>
+
+                <section data-state="cloud">
+                    <p>Vous utilisez tous les jours le Cloud</p>
+                    <img src="img/cloud_au_quotidien.jpg" />
+                </section>
+
+                <section data-state="cloud">
+                    <p>Anecdote : Lancement de Pokemon Go !</p>
+                    <img class=" fragment data-fragment-index='1'" src="img/google-cloud-pokemon-go.png" />
+                </section>
+
+                <section data-state="cloud">
+                    <p>Anecdote : AWS Swowmobile !</p>
+                    <img class=" fragment data-fragment-index='1'" src="img/AWS-Snowmobile.png" />
+                    <aside class="notes">
+                    	0,5 exaoctets !! (= 10^18 octets = 1 000 peta = 1 million de terra)
+                    </aside>
+                </section>
+
+                <section data-state="cloud">
+                    <p>Anecdote : Netflix Chaos Monkey !</p>
+                    <a href="https://github.com/Netflix/SimianArmy" target="_blank"><img class=" fragment data-fragment-index='1'" src="img/Chaos_Monkey.jpeg" width="600 " height="400 " /></a>
+                </section>
+
+            </section>
+
+            
+            <!-- PAUSE -->
+            <section data-state="pause" data-background="#4a7eba">
+                <h1>Pause</h1>
+                <img data-src="img/pause.gif ">
+            </section>
+            
+            <!-- DEMO -->
+            <section data-state="demo" data-background="#4a7eba">
+                <h1>Let's practice !</h1>
+                <a href="https://www.katacoda.com/courses/docker" target="_blank"><img data-src="img/yogiberra_theory_practice.jpg "></a>
+            </section>
+            
+            <!-- Google Cloud Platform -->
+            <section data-state="gcloud" data-background="#4a7eba">
+                <h1>GCP</h1>
+                <img data-src="img/google-cloud-platform-services.jpg ">
+            </section>
+
+            <!-- Test gratuit -->
+            <section data-state="cloud">
+                <p>Faites le test !</p>
+                <a href="https://cloud.google.com/" target="_blank"><img src="img/google_cloud_free.jpg " width="400 " height="400 " align="left " /></a>
+                <a href="https://aws.amazon.com/fr/" target="_blank"><img src="img/aws_free_tier.jpg " width="400 " height="400 " align="right " /></a>
+            </section>
+
+            <!-- Conclusion -->
+            <section data-state="conclusion">
+            	<h2>Conclusion</h2>
+            	<img src="img/conclusion.jpeg">
+
+            	<aside class="notes">
+            		- Virtualisation = 1 élément du cloud computing<br>
+            		- Revolution des usages (paiement à la consommation, automatisation...)<br>
+            		- On "code" l'infrastructure !<br>
+            		- Bien réfléchir en amont à son besoin pour faire le bon choix d'architecture !
+            	</aside>
+            </section>
+
+            <!-- Merci -->
+            <section data-state="thanks">
+                <img src="img/thanks.jpg">
+                <br><br>
+                <u>Contact</u> : gdupin@gmail.com
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js "></script>
+    <script src="js/reveal.js "></script>
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            // Display controls in the bottom right corner
+            controls: true,
+
+            // Display a presentation progress bar
+            progress: true,
+
+            // Display the page number of the current slide
+            slideNumber: false,
+
+            // Push each slide change to the browser history
+            history: false,
+
+            // Enable keyboard shortcuts for navigation
+            keyboard: true,
+
+            // Enable the slide overview mode
+            overview: true,
+
+            // Vertical centering of slides
+            center: true,
+
+            // Enables touch navigation on devices with touch input
+            touch: true,
+
+            // Loop the presentation
+            loop: false,
+
+            // Change the presentation direction to be RTL
+            rtl: false,
+
+            // Randomizes the order of slides each time the presentation loads
+            shuffle: false,
+
+            // Turns fragments on and off globally
+            fragments: true,
+
+            // Flags if the presentation is running in an embedded mode,
+            // i.e. contained within a limited portion of the screen
+            embedded: false,
+
+            // Flags if we should show a help overlay when the questionmark
+            // key is pressed
+            help: true,
+
+            // Flags if speaker notes should be visible to all viewers
+            showNotes: false,
+
+            // Number of milliseconds between automatically proceeding to the
+            // next slide, disabled when set to 0, this value can be overwritten
+            // by using a data-autoslide attribute on your slides
+            autoSlide: 0,
+
+            // Stop auto-sliding after user input
+            autoSlideStoppable: true,
+
+            // Use this method for navigation when auto-sliding
+            autoSlideMethod: Reveal.navigateNext,
+
+            // Enable slide navigation via mouse wheel
+            mouseWheel: false,
+
+            // Hides the address bar on mobile devices
+            hideAddressBar: true,
+
+            // Opens links in an iframe preview overlay
+            previewLinks: false,
+
+            // Transition style
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+            // Transition speed
+            transitionSpeed: 'default', // default/fast/slow
+
+            // Transition style for full page slide backgrounds
+            backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+            // Number of slides away from the current that are visible
+            viewDistance: 3,
+
+            // Parallax background image
+            parallaxBackgroundImage: '', // e.g. " 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg' "
+
+            // Parallax background size
+            parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px "
+
+            // Number of pixels to move the parallax background per slide
+            // - Calculated automatically unless specified
+            // - Set to 0 to disable movement along an axis
+            parallaxBackgroundHorizontal: null,
+            parallaxBackgroundVertical: null,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [
+                // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+                // Interpret Markdown in <section> elements
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                // Syntax highlight for <code> elements
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                // Zoom in and out with Alt+click
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+
+                // Speaker notes
+                { src: 'plugin/notes/notes.js', async: true },
+
+            ]
+    });
+    </script>
+
+</body>
+
+</html>
