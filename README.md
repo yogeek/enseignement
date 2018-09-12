@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Liste des cours
 
-You can use the [editor on GitHub](https://github.com/yogeek/enseignement/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Virtualisation et Cloud Computing :cloud:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### Concepts généraux
+- [Introduction : De la virtualisation au Cloud Computing](https://github.com/yogeek/enseignement/Introduction_Virtualisation_CloudComputing/)
+- [Introduction : De la virtualisation au Cloud Computing](https://yogeek.github.io/yogeek/enseignement/Introduction_Virtualisation_CloudComputing/)
 
-### Markdown
+#### GCP
+- [Overview](https://cloud.google.com/docs/overview/)
+- [Getting Started](https://cloud.google.com/getting-started/)
+- [Introduction à GCP](https://fr.slideshare.net/PulkitGupta81/introduction-to-gcp-google-cloud-platform?qid=b440a69e-5d9e-4fdb-807c-4b78051b8cad)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Conteneurs applicatifs :whale:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yogeek/enseignement/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [Docker Saison 1 : Introduction aux conteneurs applicatifs](https://slides.com/guillaumedupin/docker-2-2)
+- [Docker Saison 2 : Simplifier l'orchestration d'applications micro-services](https://slides.com/guillaumedupin/docker-2-2-3)
+- [Docker : Containers Everywhere](https://slides.com/guillaumedupin/docker-2-2-4)
+- [(Se) Former à Docker](https://slides.com/guillaumedupin/docker-2-2-4-7)
+- [Docker Introduction Workshop](https://slides.com/guillaumedupin/docker-2-2-7)
