@@ -3,8 +3,7 @@
 ### Virtualisation et Cloud Computing :cloud:
 
 #### Concepts généraux
-- [Introduction : De la virtualisation au Cloud Computing](https://github.com/yogeek/enseignement/Introduction_Virtualisation_CloudComputing/)
-- [Introduction : De la virtualisation au Cloud Computing](https://yogeek.github.io/yogeek/enseignement/Introduction_Virtualisation_CloudComputing/)
+- [Introduction : De la virtualisation au Cloud Computing](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/)
 
 #### GCP
 - [Overview](https://cloud.google.com/docs/overview/)
