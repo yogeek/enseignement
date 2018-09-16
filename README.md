@@ -11,6 +11,7 @@
 - [Getting Started - Français](https://cloud.google.com/getting-started/?hl=fr)
 - [Introduction à GCP](https://fr.slideshare.net/PulkitGupta81/introduction-to-gcp-google-cloud-platform?qid=b440a69e-5d9e-4fdb-807c-4b78051b8cad)
 - [Tutorial : exemple 1](http://cs231n.github.io/gce-tutorial/)
+- [GCP Cheat Sheet](https://drive.google.com/open?id=1OkFbizpnc_iyzcApqRrqsNtUVazKJDtCyH5vw3352xM)
 
 ### Conteneurs applicatifs :whale:
 
