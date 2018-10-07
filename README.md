@@ -7,6 +7,9 @@
 
 #### GCP
 - [Overview](https://cloud.google.com/docs/overview/)
+  - Services list : https://cloud.google.com/products/
+  - Geography Locations : https://cloud.google.com/about/locations/#regions-tab
+  - Quick starts : https://cloud.google.com/getting-started/?hl=fr#quick-starts
 - [Getting Started - English](https://cloud.google.com/getting-started/) 
 - [Getting Started - Français](https://cloud.google.com/getting-started/?hl=fr)
 - [Introduction à GCP](https://fr.slideshare.net/PulkitGupta81/introduction-to-gcp-google-cloud-platform?qid=b440a69e-5d9e-4fdb-807c-4b78051b8cad)
