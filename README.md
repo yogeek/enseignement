@@ -1,8 +1,6 @@
 # Virtualisation et Cloud Computing :cloud:
 
-<p align="center">
-  <img src="https://pbs.twimg.com/media/BxB3k23IIAAEwOk.png:large">
-</p>
+![Cloud](https://pbs.twimg.com/media/BxB3k23IIAAEwOk.png)
 
 ### Concepts généraux
 - [Introduction : De la virtualisation au Cloud Computing](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/)  
@@ -13,9 +11,7 @@
 
 # GCP
 
-<p align="center">
-  <img src="https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png">
-</p>
+![GCP](https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png:small)
 
 ### Theory
 - [Overview](https://cloud.google.com/docs/overview/)
@@ -43,7 +39,7 @@
 
 # Conteneurs applicatifs :whale:
 
-![Docker Learner](img/docker-learner.png)
+![Docker Learner](img/docker-learner.png?raw=true)
 
 - [Docker Saison 1 : Introduction aux conteneurs applicatifs](https://slides.com/guillaumedupin/docker-2-2)
 - [Docker Saison 2 : Simplifier l'orchestration d'applications micro-services](https://slides.com/guillaumedupin/docker-2-2-3)
