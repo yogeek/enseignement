@@ -1,4 +1,4 @@
-## Virtualisation et Cloud Computing :cloud:
+# Virtualisation et Cloud Computing :cloud:
 
 <p align="center">
   <img src="https://pbs.twimg.com/media/BxB3k23IIAAEwOk.png:large">
@@ -11,7 +11,7 @@
 <br />
 <br />
 
-## GCP
+# GCP
 
 <p align="center">
   <img src="https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png">
@@ -41,7 +41,7 @@
 <br />
 <br />
 
-## Conteneurs applicatifs :whale:
+# Conteneurs applicatifs :whale:
 
 ![Docker Learner](img/docker-learner.png)
 
