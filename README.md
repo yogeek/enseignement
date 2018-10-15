@@ -2,10 +2,18 @@
 
 ### Virtualisation et Cloud Computing :cloud:
 
+<p align="center">
+  <img src="https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png">
+</p>
+
 #### Concepts généraux
 - [Introduction : De la virtualisation au Cloud Computing](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/)
 
 #### GCP
+
+<p align="center">
+  <img src="https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png">
+</p>
 
 ##### Theory
 - [Overview](https://cloud.google.com/docs/overview/)
