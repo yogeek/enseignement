@@ -11,7 +11,7 @@
 
 # GCP
 
-![GCP](https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png:small)
+![GCP](https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png)
 
 ### Theory
 - [Overview](https://cloud.google.com/docs/overview/)
