@@ -14,11 +14,11 @@
 ![GCP](https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png)
 
 ### Theory
+- [Introduction à GCP](Introduction_GoogleCloudPlatform/GCP_Introduction_ISAE_2018.pdf?raw=true)
 - [Overview](https://cloud.google.com/docs/overview/)
   - Services list : https://cloud.google.com/products/
   - Geography Locations : https://cloud.google.com/about/locations/#regions-tab
   - Quick starts : https://cloud.google.com/getting-started/?hl=fr#quick-starts
-- [Introduction à GCP](https://fr.slideshare.net/PulkitGupta81/introduction-to-gcp-google-cloud-platform?qid=b440a69e-5d9e-4fdb-807c-4b78051b8cad)
 
 ### Practice
 
