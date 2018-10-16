@@ -9,7 +9,9 @@
 <br />
 <br />
 
-# GCP
+# Cloud Computing
+
+## Google Cloud Platform (GCP)
 
 ![GCP](https://www.cloudhealthtech.com/sites/default/files/logo-gcp_350px.png)
 
