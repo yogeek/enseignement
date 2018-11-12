@@ -31,6 +31,9 @@
   - [GCS Storage](https://codelabs.developers.google.com/codelabs/es003l-storage)
   - [Cloud Datalab](https://codelabs.developers.google.com/codelabs/cpb100-datalab)
 - [Tutorial : exemple 1](http://cs231n.github.io/gce-tutorial/)
+- Deep Learning on GCP
+  - [Fully configured JupyterLab environment](https://cloud.google.com/deep-learning-vm/docs/)
+  - Option : install [JupyterLab Github plugin](https://github.com/jupyterlab/jupyterlab-git)
 
 ### Useful links
 - [GCP Cheat Sheet](https://drive.google.com/open?id=1OkFbizpnc_iyzcApqRrqsNtUVazKJDtCyH5vw3352xM)
