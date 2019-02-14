@@ -1,4 +1,4 @@
-# Virtualisation et Cloud Computing :cloud:
+# Virtualisation et Cloud Computing :mortar_board:
 
 ![Cloud](https://pbs.twimg.com/media/BxB3k23IIAAEwOk.png)
 
@@ -9,7 +9,7 @@
 <br />
 <br />
 
-# Cloud Computing
+# Cloud Computing :cloud:
 
 ## Google Cloud Platform (GCP)
 
@@ -42,9 +42,11 @@
 <br />
 <br />
 
-# Conteneurs applicatifs :whale:
+# Conteneurs applicatifs 
 
 ![Docker Learner](img/docker-learner.png?raw=true)
+
+## Docker :whale:
 
 - [Docker Saison 1 : Introduction aux conteneurs applicatifs](https://slides.com/guillaumedupin/docker-2-2)
 - [Docker Saison 2 : Simplifier l'orchestration d'applications micro-services](https://slides.com/guillaumedupin/docker-2-2-3)
