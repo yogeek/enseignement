@@ -56,6 +56,5 @@
 
 - [Tutorials](https://kubernetes.io/docs/tutorials/)
 - [Playground](https://labs.play-with-k8s.com/)
-- [Kompose]http://kompose.io/)
-(https://github.com/docker/app/blob/master/docs/compatibility.md)
+- [Katacoda](https://www.katacoda.com/courses/kubernetes)
 
