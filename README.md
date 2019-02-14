@@ -51,3 +51,11 @@
 - [Docker : Containers Everywhere](https://slides.com/guillaumedupin/docker-2-2-4)
 - [(Se) Former à Docker](https://slides.com/guillaumedupin/docker-2-2-4-7)
 - [Docker Introduction Workshop](https://slides.com/guillaumedupin/docker-2-2-7)
+
+## Kubernetes :wheel_of_dharma:
+
+- [Tutorials](https://kubernetes.io/docs/tutorials/)
+- [Playground](https://labs.play-with-k8s.com/)
+- [Kompose]http://kompose.io/)
+(https://github.com/docker/app/blob/master/docs/compatibility.md)
+
