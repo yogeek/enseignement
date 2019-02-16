@@ -54,6 +54,12 @@
 - [(Se) Former à Docker](https://slides.com/guillaumedupin/docker-2-2-4-7)
 - [Docker Introduction Workshop](https://slides.com/guillaumedupin/docker-2-2-7)
 
+### Docker for Data Science
+- [Docker for DataScience](https://github.com/docker-for-data-science/docker-for-data-science-tutorial)
+- [Dataiku](https://hub.docker.com/r/dataiku/dss/)
+- [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
+- [Google DataLab](https://github.com/googledatalab/datalab/wiki/Getting-Started)
+
 ## Kubernetes :wheel_of_dharma:
 
 - [Tutorials](https://kubernetes.io/docs/tutorials/)
