@@ -60,3 +60,6 @@
 - [Playground](https://labs.play-with-k8s.com/)
 - [Katacoda](https://www.katacoda.com/courses/kubernetes)
 
+# Infrastructure as Code
+
+- [Terraform on GCP](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/terraform-google-modules/docs-examples.git&cloudshell_git_branch=oics-blog&cloudshell_working_dir=oics-blog&cloudshell_image=gcr.io/graphite-cloud-shell-images/terraform:latest&open_in_editor=main.tf&cloudshell_print=./motd&cloudshell_tutorial=./tutorial.md)
