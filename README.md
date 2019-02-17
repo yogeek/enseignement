@@ -68,4 +68,6 @@
 
 # Infrastructure as Code
 
+<img src="https://images.slideplayer.com/39/10912423/slides/slide_9.jpg" title="Pet Vs. Cattle" height="180" width="320">
+
 - [Terraform on GCP](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/terraform-google-modules/docs-examples.git&cloudshell_git_branch=oics-blog&cloudshell_working_dir=oics-blog&cloudshell_image=gcr.io/graphite-cloud-shell-images/terraform:latest&open_in_editor=main.tf&cloudshell_print=./motd&cloudshell_tutorial=./tutorial.md)
