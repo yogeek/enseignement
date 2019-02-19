@@ -48,11 +48,9 @@
 
 ## Docker :whale:
 
-- [Docker Saison 1 : Introduction aux conteneurs applicatifs](https://slides.com/guillaumedupin/docker-2-2)
-- [Docker Saison 2 : Simplifier l'orchestration d'applications micro-services](https://slides.com/guillaumedupin/docker-2-2-3)
+- [Docker Introduction Workshop](https://slides.com/guillaumedupin/docker-2-2-7)
 - [Docker : Containers Everywhere](https://slides.com/guillaumedupin/docker-2-2-4)
 - [(Se) Former à Docker](https://slides.com/guillaumedupin/docker-2-2-4-7)
-- [Docker Introduction Workshop](https://slides.com/guillaumedupin/docker-2-2-7)
 
 ### Docker for Data Science
 - [Docker for DataScience](https://github.com/docker-for-data-science/docker-for-data-science-tutorial)
